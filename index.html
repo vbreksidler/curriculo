@@ -46,14 +46,16 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
             margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: 600;
             border: 4px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .name {
@@ -277,9 +279,19 @@
             margin-bottom: 8px;
         }
         
-        .tech-list {
-            font-size: 14px;
-            color: #4a5568;
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .column {
+            margin-bottom: 0;
+        }
+        
+        .column .main-section-title {
+            margin-bottom: 15px;
         }
         
         @media (max-width: 768px) {
@@ -296,6 +308,10 @@
             }
             
             .technical-skills {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-column-section {
                 grid-template-columns: 1fr;
             }
         }
@@ -419,7 +435,7 @@
                 <div class="experience-item">
                     <div class="job-title">Gerente Operacional</div>
                     <div class="company">QuickUp</div>
-                    <div class="date">2018 – 2023</div>
+                    <div class="date">2018 – 2022</div>
                     <div class="description">
                         <ul>
                             <li>Gestão da operação de vending machines, incluindo logística, manutenção técnica e programação básica</li>
@@ -464,61 +480,63 @@
                 </div>
             </section>
             
-            <section class="main-section">
-                <h2 class="main-section-title">Projetos Relevantes</h2>
-                
-                <div class="project-item">
-                    <div class="project-title">Poções da Terra</div>
-                    <a href="https://pocoesdaterra.com.br" class="project-url" target="_blank">pocoesdaterra.com.br</a>
-                    <div class="description">
-                        Site institucional integrado a e-commerce e sistema de entrega, otimizado para SEO.
+            <div class="two-column-section">
+                <section class="column">
+                    <h2 class="main-section-title">Projetos Relevantes</h2>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Poções da Terra</div>
+                        <a href="https://pocoesdaterra.com.br" class="project-url" target="_blank">pocoesdaterra.com.br</a>
+                        <div class="description">
+                            Site institucional integrado a e-commerce e sistema de entrega, otimizado para SEO.
+                        </div>
                     </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="project-title">D.A Mecânica</div>
-                    <a href="https://damecanica.com.br" class="project-url" target="_blank">damecanica.com.br</a>
-                    <div class="description">
-                        Site institucional para apresentação de serviços e contato, otimizado para SEO.
+                    
+                    <div class="project-item">
+                        <div class="project-title">D.A Mecânica</div>
+                        <a href="https://damecanica.com.br" class="project-url" target="_blank">damecanica.com.br</a>
+                        <div class="description">
+                            Site institucional para apresentação de serviços e contato, otimizado para SEO.
+                        </div>
                     </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="project-title">Ritualiza</div>
-                    <a href="https://ritualiza.com.br" class="project-url" target="_blank">ritualiza.com.br</a>
-                    <div class="description">
-                        Site institucional integrado a e-commerce e sistema de entrega.
+                    
+                    <div class="project-item">
+                        <div class="project-title">Ritualiza</div>
+                        <a href="https://ritualiza.com.br" class="project-url" target="_blank">ritualiza.com.br</a>
+                        <div class="description">
+                            Site institucional integrado a e-commerce e sistema de entrega.
+                        </div>
                     </div>
-                </div>
-            </section>
-            
-            <section class="main-section">
-                <h2 class="main-section-title">Formação Acadêmica</h2>
+                </section>
                 
-                <div class="education-item">
-                    <div class="job-title">Tecnologia em Análise e Desenvolvimento de Sistemas</div>
-                    <div class="company">PUC/PR</div>
-                    <div class="date">Previsão: 2026</div>
-                </div>
-                
-                <div class="education-item">
-                    <div class="job-title">Salesforce Academy Back-End Developer</div>
-                    <div class="company">OSF</div>
-                    <div class="date">2023</div>
-                </div>
-                
-                <div class="education-item">
-                    <div class="job-title">Desenvolvimento Web Full Stack</div>
-                    <div class="company">Trybe</div>
-                    <div class="date">2023</div>
-                </div>
-                
-                <div class="education-item">
-                    <div class="job-title">Ensino Médio</div>
-                    <div class="company">Colégio Marista Santa Maria</div>
-                    <div class="date">2009 – 2011</div>
-                </div>
-            </section>
+                <section class="column">
+                    <h2 class="main-section-title">Formação Acadêmica</h2>
+                    
+                    <div class="education-item">
+                        <div class="job-title">Tecnologia em Análise e Desenvolvimento de Sistemas</div>
+                        <div class="company">PUC/PR</div>
+                        <div class="date">Previsão: 2026</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="job-title">Salesforce Academy Back-End Developer</div>
+                        <div class="company">OSF</div>
+                        <div class="date">2023</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="job-title">Desenvolvimento Web Full Stack</div>
+                        <div class="company">Trybe</div>
+                        <div class="date">2023</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="job-title">Ensino Médio</div>
+                        <div class="company">Colégio Marista Santa Maria</div>
+                        <div class="date">2009 – 2011</div>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
 </body>
